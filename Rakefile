@@ -53,14 +53,6 @@ task :build_frank do
   build_project(xcproject, scheme, build_path, libname)
 end
 
-
-task :combine_libraries do
-  `lipo -create -output "dist/libFrank.a" "build/Release-iphoneos/libFrank.a" "build/Release-iphonesimulator/libFrank.a"`
-end
-
-desc "Build a univeral library for both iphone and iphone simulator"
-task :build_lib => [:prep_dist, :build_uispec,:build_kif,:build_shelley,:build_frank]
-
 desc "clean build artifacts"
 task :clean do
   rm_rf 'dist'
@@ -71,20 +63,17 @@ task :prep_dist do
   mkdir_p 'dist'
 end
 
-task :build => [:clean, :prep_dist, :build_lib, :build_shelley]
+desc "Build a univeral library for both iphone and iphone simulator"
+task :build_lib => [:prep_dist, :build_uispec,:build_kif,:build_shelley,:build_frank]
+
+
+task :build => [:clean, :prep_dist, :build_lib]
 task :default => :build
-
-desc "compile libShelley.a and copy it into dist"
-task :build_shelley do
-  sh 'cd lib/Shelley && rake build_lib'
-  sh 'cp lib/Shelley/build/libShelley.a dist/'
-end
-
-desc "build and copy everything into the gem directories for distribution as a gem"
-task :build_for_release => [:build, :build_shelley, :copy_dist_to_gem]
 
 desc "copies contents of dist dir to the frank-cucumber gem's frank-skeleton"
 task :copy_dist_to_gem do
   sh "cp -r dist/* gem/frank-skeleton/"
 end
 
+desc "build and copy everything into the gem directories for distribution as a gem"
+task :build_for_release => [:build, :copy_dist_to_gem]
