@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0071264614F8956700E738ED /* ViewJSONSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0071264414F8956700E738ED /* ViewJSONSerializer.h */; };
 		0071264714F8956700E738ED /* ViewJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0071264514F8956700E738ED /* ViewJSONSerializer.m */; };
+		009F6B0715E45B3000B072AF /* UITableView+AutomationScrolling.h in Headers */ = {isa = PBXBuildFile; fileRef = 009F6B0515E45B3000B072AF /* UITableView+AutomationScrolling.h */; };
+		009F6B0815E45B3000B072AF /* UITableView+AutomationScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 009F6B0615E45B3000B072AF /* UITableView+AutomationScrolling.m */; };
 		4C1DD76C12BADFE100E10B8C /* OrientationCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DD76812BADFE100E10B8C /* OrientationCommand.m */; };
 		4C1DD76D12BADFE100E10B8C /* OrientationCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C1DD76912BADFE100E10B8C /* OrientationCommand.h */; };
 		4C1DD76E12BADFE100E10B8C /* AppCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DD76A12BADFE100E10B8C /* AppCommand.m */; };
@@ -96,6 +98,8 @@
 /* Begin PBXFileReference section */
 		0071264414F8956700E738ED /* ViewJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewJSONSerializer.h; path = src/ViewJSONSerializer.h; sourceTree = "<group>"; };
 		0071264514F8956700E738ED /* ViewJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewJSONSerializer.m; path = src/ViewJSONSerializer.m; sourceTree = "<group>"; };
+		009F6B0515E45B3000B072AF /* UITableView+AutomationScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+AutomationScrolling.h"; path = "src/UITableView+AutomationScrolling.h"; sourceTree = "<group>"; };
+		009F6B0615E45B3000B072AF /* UITableView+AutomationScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+AutomationScrolling.m"; path = "src/UITableView+AutomationScrolling.m"; sourceTree = "<group>"; };
 		00C19C0E15B222EB0033EE7C /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 		4C1DD76812BADFE100E10B8C /* OrientationCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrientationCommand.m; path = src/OrientationCommand.m; sourceTree = "<group>"; };
 		4C1DD76912BADFE100E10B8C /* OrientationCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrientationCommand.h; path = src/OrientationCommand.h; sourceTree = "<group>"; };
@@ -278,6 +282,8 @@
 				0071264514F8956700E738ED /* ViewJSONSerializer.m */,
 				C1C6D1EC1535522300EAA0CF /* UIView+FrankGestures.m */,
 				D6A1D27E15A8D05E00EC056C /* UIView+Frank.m */,
+				009F6B0515E45B3000B072AF /* UITableView+AutomationScrolling.h */,
+				009F6B0615E45B3000B072AF /* UITableView+AutomationScrolling.m */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				D6FA01B714283C4F00576AE3 /* FranklyProtocolHelper.h in Headers */,
 				C1C3CCC0156BCF3500AEE136 /* FEXTappableConfirmationButton.h in Headers */,
 				D6FA01B714283C4F00576AEB /* UITableViewCell+TappableConfirmationButton.h in Headers */,
+				009F6B0715E45B3000B072AF /* UITableView+AutomationScrolling.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +518,7 @@
 				C1C3CCC1156BCF3500AEE136 /* FEXTappableConfirmationButton.m in Sources */,
 				D6FA01B714283C4F00576AED /* UITableViewCell+TappableConfirmationButton.m in Sources */,
 				D6A1D28015A8D05E00EC056C /* UIView+Frank.m in Sources */,
+				009F6B0815E45B3000B072AF /* UITableView+AutomationScrolling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
